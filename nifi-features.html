@@ -1,0 +1,302 @@
+<!doctype html>
+<!--[if lt IE 7 ]><html itemscope itemtype="http://schema.org/Organization" id="ie6" class="ie ie-old" lang="en-US"><![endif]-->
+<!--[if IE 7 ]>   <html itemscope itemtype="http://schema.org/Organization" id="ie7" class="ie ie-old" lang="en-US"><![endif]-->
+<!--[if IE 8 ]>   <html itemscope itemtype="http://schema.org/Organization" id="ie8" class="ie ie-old" lang="en-US"><![endif]-->
+<!--[if IE 9 ]>   <html itemscope itemtype="http://schema.org/Organization" id="ie9" class="ie" lang="en-US"><![endif]-->
+<!--[if gt IE 9]><!--><html itemscope itemtype="http://schema.org/Organization" lang="en-US"><!--<![endif]-->
+<head>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <title>NiFi Features - MarkLogic NiFi Processors</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" sizes="16x16 24x24 32x32 48x48 64x64 96x96" href="/nifi/favicon.ico">
+    <meta name="application-name" content="MarkLogic NiFi Processors - NiFi Processors for interacting with MarkLogic">
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-6638631-15', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
+    <!-- Facebook Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1879746318909687'); // Insert your pixel ID here.
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1879746318909687&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- DO NOT MODIFY -->
+    <!-- End Facebook Pixel Code -->
+    <link type="text/css" rel="stylesheet" href="/nifi/assets/bundle.css">
+</head>
+<body class="">
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/nifi">
+                  <span class="logo">
+                    <img src="/nifi/images/logo-marklogic.svg" width="180px" height="38px" alt="MarkLogic" title="MarkLogic" scale="0">
+                  </span>
+                  MarkLogic NiFi Processors
+                </a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    
+                        <li  >
+                            
+                            <a href="/nifi/getting-started">Getting Started</a>
+                            
+                        </li>
+                    
+                        <li  >
+                            
+                            <a href="https://github.com/marklogic/nifi">GitHub</a>
+                            
+                        </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="side-nav col-md-3 hide-small">
+          <div class="panel panel-default">
+  <div class="panel-heading">Navigation</div>
+  <ul class="list-group">
+  
+  <li  class="list-group-item"  >
+    
+    <a href="/nifi/">Introduction</a>
+    
+    
+  </li>
+  
+  <li  class="list-group-item"  >
+    
+    <a href="/nifi/getting-started">Getting Started</a>
+    
+    
+  </li>
+  
+  <li  class="list-group-item"  >
+    
+    <a href="/nifi/step-by-step">Step-by-Step Guide</a>
+    
+    
+  </li>
+  
+  <li  class="list-group-item active"  >
+    
+    <a href="/nifi/nifi-features">NiFi Features</a>
+    
+    
+  </li>
+  
+  <li  class="list-group-item"  >
+    
+    <a href="/nifi/cookbook-recipes">Cookbook Recipes</a>
+    
+    
+      <ul class="list-group">
+  
+  <li  class="list-group-item"  >
+    
+    <a href="/nifi/get-data-from-a-relational-database">Relational Database to MarkLogic</a>
+    
+    
+  </li>
+  
+  <li  class="list-group-item"  >
+    
+    <a href="/nifi/file-system-to-marklogic">File System to MarkLogic</a>
+    
+    
+  </li>
+  
+  <li  class="list-group-item"  >
+    
+    <a href="/nifi/run-data-hub-input-flow">Run Data Hub Input Flow</a>
+    
+    
+  </li>
+  
+</ul>
+
+    
+  </li>
+  
+  <li  class="list-group-item"  >
+    
+    <a href="/nifi/faqs">FAQs</a>
+    
+    
+  </li>
+  
+</ul>
+
+</div>
+
+        </div>
+        <div class="col-md-9">
+          <h1 id="controller-service">Controller Service</h1>
+
+<h2 id="marklogicdatabaseclientservice">MarkLogicDatabaseClientService</h2>
+
+<p>Provides a MarkLogic DatabaseClient instance for use by other processors.</p>
+
+<h3 id="properties">Properties</h3>
+<dl>
+  <dt>Host</dt>
+  <dd>The host with the REST server for which a DatabaseClient instance needs to be created</dd>
+  <dt>Port</dt>
+  <dd>The port on which the REST server is hosted</dd>
+  <dt>Load Balancer</dt>
+  <dd>Is the host specified a load balancer?</dd>
+  <dt>Security Context Type</dt>
+  <dd>The type of the Security Context that needs to be used for authentication. The options are:
+    <ul>
+      <li>DIGEST</li>
+      <li>BASIC</li>
+      <li>CERTIFICATE</li>
+    </ul>
+  </dd>
+  <dt>Username</dt>
+  <dd>The user with read, write, or admin privileges - Required for Basic and Digest authentication</dd>
+  <dt>Password</dt>
+  <dd>The password for the user - Required for Basic and Digest authentication</dd>
+  <dt>Database</dt>
+  <dd>The database to access. By default, the configured database for the REST server would be accessed.</dd>
+  <dt>SSL Context Service</dt>
+  <dd>The SSL Context Service used to provide KeyStore and TrustManager information for secure connections.</dd>
+  <dt>Client Authentication</dt>
+  <dd>Client authentication policy when connecting via a secure connection. This property is only used when an SSL Context has been defined and enabled.</dd>
+</dl>
+
+<h1 id="marklogic-processors">MarkLogic Processors</h1>
+
+<h2 id="putmarklogic-processor">PutMarkLogic Processor</h2>
+
+<p>Write batches of FlowFiles as documents to a MarkLogic server using the MarkLogic Data Movement SDK (DMSDK).</p>
+
+<h3 id="properties-1">Properties</h3>
+
+<dl>
+  <dt>DatabaseClient Service</dt>
+  <dd>The DatabaseClient Controller Service that provides the MarkLogic connection.</dd>
+  <dt>Batch Size</dt>
+  <dd>The number of documents per batch - sets the batch size on the Batcher.</dd>
+  <dt>Thread Count</dt>
+  <dd>The number of threads - sets the thread count on the Batcher.</dd>
+  <dt>Collections</dt>
+  <dd>Comma-delimited sequence of collections to add to each document.</dd>
+  <dt>Format</dt>
+  <dd>Format for each document; if not specified, MarkLogic will determine the format based on the URI.</dd>
+  <dt>Job ID</dt>
+  <dd>ID for the WriteBatcher job.</dd>
+  <dt>Job Name</dt>
+  <dd>Name for the WriteBatcher job.</dd>
+  <dt>MIME Type</dt>
+  <dd>MIME type for each document; if not specified, MarkLogic will determine the MIME type based on the URI.</dd>
+  <dt>Permissions</dt>
+  <dd>Comma-delimited sequence of permissions - role1, capability1, role2, capability2 - to add to each document</dd>
+  <dt>Temporal Collection</dt>
+  <dd>The temporal collection to use for a temporal document insert.</dd>
+  <dt>Server Transform</dt>
+  <dd>The name of REST server transform to apply to every document as it’s written.</dd>
+  <dt>URI Attribute Name</dt>
+  <dd>The name of the FlowFile attribute whose value will be used as the URI.</dd>
+  <dt>URI Prefix</dt>
+  <dd>The prefix to prepend to each URI.</dd>
+  <dt>URI Suffix</dt>
+  <dd>The suffix to append to each URI.</dd>
+  <dt>trans:<em>&lt;custom-transform-parameter&gt;</em></dt>
+  <dd>A dynamic parameter with the prefix of <code class="highlighter-rouge">trans:</code> that will be passed to the transform.</dd>
+</dl>
+
+<h2 id="querymarklogic-processor">QueryMarkLogic Processor</h2>
+
+<p>Creates FlowFiles from batches of documents, matching the given criteria, retrieved from a MarkLogic server using the MarkLogic Data Movement SDK (DMSDK).</p>
+
+<h3 id="properties-2">Properties</h3>
+
+<dl>
+  <dt>DatabaseClient Service</dt>
+  <dd>The DatabaseClient Controller Service that provides the MarkLogic connection.</dd>
+  <dt>Batch Size</dt>
+  <dd>The number of documents per batch - sets the batch size on the Batcher.</dd>
+  <dt>Thread Count</dt>
+  <dd>The number of threads - sets the thread count on the Batcher.</dd>
+  <dt>Consistent Snapshot</dt>
+  <dd>Boolean used to indicate that the matching documents were retrieved from a consistent snapshot.</dd>
+  <dt>Collections</dt>
+  <dd>Comma-separated list of collections to query from a MarkLogic server.</dd>
+</dl>
+
+
+        </div>
+      </div>
+    </div>
+  </article>
+
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p>
+                    Copyright © 2016-2018 MarkLogic Corporation. All Rights Reserved. MARKLOGIC® is a registered trademark of MarkLogic Corporation.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!--[if lt IE 9]>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="/nifi/js/respond.min.js"></script>
+    <![endif]-->
+
+    <script type="text/javascript" src="/nifi/assets/bundle.js" id="1"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-79716597-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>
+
